@@ -1,14 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="16sp"
     tools:context=".ui.home.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txtLabelCar"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Машина : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelRoof"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelHouse" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/txtHouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мусорка"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelHouse"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelHouse"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelHouse" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Русский Бизнес"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtLabelMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Деньги : "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtMoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="200000000000 $"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelMoney"
+        app:layout_constraintEnd_toStartOf="@+id/txtLabelExperience"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelMoney"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelMoney" />
+
+    <TextView
+        android:id="@+id/txtLabelExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Опыт : "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txtExperience"
+        app:layout_constraintTop_toTopOf="@+id/txtExperience" />
+
+    <TextView
+        android:id="@+id/txtExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="111111111110"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <View
+        android:id="@+id/vMoney"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelName"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelMoney"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/txtLabelName"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Имя : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelJob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vMoney" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelName"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelName"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelName" />
+
+    <TextView
+        android:id="@+id/txtLabelJob"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Работа : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelSalary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelName" />
+
+    <TextView
+        android:id="@+id/txtJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Агент ФСБ"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelJob"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelJob"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelJob" />
+
+    <TextView
+        android:id="@+id/txtLabelSalary"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Зарплата : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelJob" />
+
+    <TextView
+        android:id="@+id/txtSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$200/мес"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelSalary"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelSalary" />
+
+    <TextView
+        android:id="@+id/txtLabelStatus"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Статус : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelHouse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelSalary" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Бомж"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelStatus"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelStatus"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelStatus" />
+
+    <TextView
+        android:id="@+id/txtLabelHouse"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Дом : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtLabelCar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelStatus" />
+
+    <TextView
+        android:id="@+id/txtLabelRoof"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Крыша : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/vBody"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelCar" />
+
+    <TextView
+        android:id="@+id/txtRoof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нет"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelRoof"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelRoof"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelRoof" />
+
+    <TextView
+        android:id="@+id/txtCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="нет"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelCar"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelCar"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelCar" />
+
+    <TextView
+        android:id="@+id/btnJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Работа"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Обучение"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtJob" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подработать"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtSalary" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Магазин"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtStatus" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Банк"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtHouse" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мафия"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCar" />
+
+    <View
+        android:id="@+id/vBody"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView33"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelRoof"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02.04.2018"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView33" />
+
+    <View
+        android:id="@+id/vBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView30"
+        app:layout_constraintTop_toBottomOf="@+id/textView33"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Сохранить"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView31"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vBottom" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загрузить"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintTop_toTopOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ускорить : 1x"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/vBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vBody" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
