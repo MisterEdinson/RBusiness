@@ -18,5 +18,54 @@
         android:id="@+id/homeFragment"
         android:name="com.skiffold.app.rbusiness.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_jobFragment"
+            app:destination="@id/jobFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_educationFragment"
+            app:destination="@id/educationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_partJobFragment"
+            app:destination="@id/partJobFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bankFragment"
+            app:destination="@id/bankFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mafiaFragment"
+            app:destination="@id/mafiaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.skiffold.app.rbusiness.ui.job.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" />
+    <fragment
+        android:id="@+id/educationFragment"
+        android:name="com.skiffold.app.rbusiness.ui.education.EducationFragment"
+        android:label="fragment_education"
+        tools:layout="@layout/fragment_education" />
+    <fragment
+        android:id="@+id/partJobFragment"
+        android:name="com.skiffold.app.rbusiness.ui.partJob.PartJobFragment"
+        android:label="fragment_part_job"
+        tools:layout="@layout/fragment_part_job" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.skiffold.app.rbusiness.ui.shop.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/bankFragment"
+        android:name="com.skiffold.app.rbusiness.ui.bank.BankFragment"
+        android:label="fragment_bank"
+        tools:layout="@layout/fragment_bank" />
+    <fragment
+        android:id="@+id/mafiaFragment"
+        android:name="com.skiffold.app.rbusiness.ui.mafia.MafiaFragment"
+        android:label="fragment_mafia"
+        tools:layout="@layout/fragment_mafia" />
 </navigation>

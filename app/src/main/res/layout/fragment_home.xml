@@ -40,6 +40,7 @@
         android:text="Русский Бизнес"
         android:textSize="32sp"
         android:textStyle="bold"
+        android:textColor="@color/blackP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -268,7 +269,7 @@
         app:layout_constraintTop_toTopOf="@+id/txtName" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/btnEducation"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn_circle"
@@ -282,7 +283,7 @@
         app:layout_constraintTop_toTopOf="@+id/txtJob" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/btnPartJob"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn_circle"
@@ -296,7 +297,7 @@
         app:layout_constraintTop_toTopOf="@+id/txtSalary" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/btnShop"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn_circle"
@@ -310,7 +311,7 @@
         app:layout_constraintTop_toTopOf="@+id/txtStatus" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/btnBank"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn_circle"
@@ -324,7 +325,7 @@
         app:layout_constraintTop_toTopOf="@+id/txtHouse" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/btnMafia"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn_circle"
