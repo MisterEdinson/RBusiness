@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="240dp"
         android:src="@drawable/image_job"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,12 +45,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvJob"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/vJob"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_job"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vJob"
+        tools:listitem="@layout/item_job" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

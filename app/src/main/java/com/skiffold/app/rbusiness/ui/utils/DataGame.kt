@@ -15,6 +15,14 @@ class DataGame {
             JobModel("Директор", 150, 10, false),
             JobModel("Депутат", 150, 10, false)
         )
+
+        val DATA_EDUCATION = listOf(
+            JobModel("Вечерняя школа", 60, 30, false),
+            JobModel("Курсы английского языка", 90, 60, false),
+            JobModel("Курсы по менеджменту", 160, 80, false),
+            JobModel("Лекции по бухгалтерскому учету", 170, 90, false),
+            JobModel("Лекции по банковскому делу", 250, 150, false)
+        )
     }
 
     data class JobModel(

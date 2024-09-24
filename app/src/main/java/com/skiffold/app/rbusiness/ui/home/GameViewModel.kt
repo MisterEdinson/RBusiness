@@ -7,6 +7,7 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.skiffold.app.rbusiness.ui.utils.DataGame
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -21,6 +22,8 @@ class GameViewModel @Inject constructor(): ViewModel() {
     private val updateInterval = 1000L
     @RequiresApi(Build.VERSION_CODES.O)
     private var currentDate: LocalDate = LocalDate.of(2024, 9, 24)
+    var dataSelectedJobs = DataGame.DATA_JOBS
+    var dataSelectedEducation = DataGame.DATA_EDUCATION
 
     private val _currentDateLiveData = MutableLiveData<String>()
     val currentDateLiveData: LiveData<String> get() = _currentDateLiveData
