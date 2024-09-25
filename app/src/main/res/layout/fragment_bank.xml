@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_white_silver"
     tools:context=".ui.bank.BankFragment">
 
     <ImageView
@@ -16,5 +16,295 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelBank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Банк"
+        android:textColor="@color/blackP"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoBank" />
+
+    <TextView
+        android:id="@+id/txtLabelBankMoney"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/blackP"
+        android:text="Деньги в кармане : "
+        app:layout_constraintStart_toStartOf="@+id/labelBank"
+        app:layout_constraintTop_toBottomOf="@+id/vBank" />
+
+    <TextView
+        android:id="@+id/txtBalans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300 $"
+        android:textStyle="bold"
+        android:textColor="@color/blackP"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelBankMoney"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelBankMoney"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelBankMoney" />
+
+    <TextView
+        android:id="@+id/txtLabelBankDeposit"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/blackP"
+        android:text="Деньги в банке : "
+        app:layout_constraintStart_toStartOf="@+id/txtLabelBankMoney"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelBankMoney" />
+
+    <TextView
+        android:id="@+id/txtDeposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 $"
+        android:textStyle="bold"
+        android:textColor="@color/blackP"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelBankDeposit"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelBankDeposit"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelBankDeposit" />
+
+    <TextView
+        android:id="@+id/txtLabelBankCredit"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/blackP"
+        android:text="Кредитный долг : "
+        app:layout_constraintStart_toStartOf="@+id/txtLabelBankDeposit"
+        app:layout_constraintTop_toBottomOf="@+id/txtLabelBankDeposit" />
+
+    <TextView
+        android:id="@+id/txtCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200 $"
+        android:textStyle="bold"
+        android:textColor="@color/blackP"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLabelBankCredit"
+        app:layout_constraintStart_toEndOf="@+id/txtLabelBankCredit"
+        app:layout_constraintTop_toTopOf="@+id/txtLabelBankCredit" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Кредит : "
+        android:textColor="@color/blackP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/labelBank"
+        app:layout_constraintEnd_toStartOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="8%"
+        android:textColor="@color/blackP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Депозит : "
+        android:textColor="@color/blackP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="8%"
+        android:textColor="@color/blackP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <View
+        android:id="@+id/vBank"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/blackP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelBank" />
+
+    <View
+        android:id="@+id/vMoney"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/blackP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtLabelBankCredit" />
+
+    <TextView
+        android:id="@+id/btnGiveCredit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_circle"
+        android:gravity="center"
+        android:paddingVertical="6dp"
+        android:text="Отдать"
+        app:layout_constraintEnd_toEndOf="@+id/btnTakeCredit"
+        app:layout_constraintStart_toStartOf="@+id/btnTakeCredit"
+        app:layout_constraintTop_toBottomOf="@+id/btnTakeCredit" />
+
+    <TextView
+        android:id="@+id/btnTakeCredit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_btn_circle"
+        android:gravity="center"
+        android:paddingVertical="6dp"
+        android:text="Взять"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etCountCredit"
+        app:layout_constraintTop_toBottomOf="@+id/vCredit" />
+
+    <EditText
+        android:id="@+id/etCountCredit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="text"
+        android:text="0"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="4dp"
+        android:background="@drawable/bg_white_silver"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGiveCredit"
+        app:layout_constraintEnd_toStartOf="@+id/btnTakeCredit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnTakeCredit" />
+
+    <TextView
+        android:id="@+id/textLabelCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Кредит"
+        android:textStyle="bold"
+        android:textColor="@color/blackP"
+        app:layout_constraintStart_toStartOf="@+id/vMoney"
+        app:layout_constraintTop_toBottomOf="@+id/vMoney" />
+
+    <View
+        android:id="@+id/vCredit"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/blackP"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelCredit" />
+
+    <View
+        android:id="@+id/vDeposit"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/blackP"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiveCredit" />
+
+    <View
+        android:id="@+id/vDepositBot"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/blackP"
+        app:layout_constraintEnd_toEndOf="@+id/vDeposit"
+        app:layout_constraintStart_toStartOf="@+id/vDeposit"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelDeposit" />
+
+    <TextView
+        android:id="@+id/textLabelDeposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Депозит"
+        android:textStyle="bold"
+        android:textColor="@color/blackP"
+        app:layout_constraintStart_toStartOf="@+id/vDeposit"
+        app:layout_constraintTop_toBottomOf="@+id/vDeposit" />
+
+    <EditText
+        android:id="@+id/etCountDeposit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:inputType="text"
+        android:text="0"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="4dp"
+        android:background="@drawable/bg_white_silver"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGiveDeposit"
+        app:layout_constraintEnd_toStartOf="@+id/btnTakeDeposit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnTakeDeposit" />
+
+    <TextView
+        android:id="@+id/btnGiveDeposit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_circle"
+        android:gravity="center"
+        android:paddingVertical="6dp"
+        android:text="Отдать"
+        app:layout_constraintEnd_toEndOf="@+id/btnTakeDeposit"
+        app:layout_constraintStart_toStartOf="@+id/btnTakeDeposit"
+        app:layout_constraintTop_toBottomOf="@+id/btnTakeDeposit" />
+
+    <TextView
+        android:id="@+id/btnTakeDeposit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_btn_circle"
+        android:gravity="center"
+        android:paddingVertical="6dp"
+        android:text="Взять"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etCountDeposit"
+        app:layout_constraintTop_toBottomOf="@+id/vDepositBot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
