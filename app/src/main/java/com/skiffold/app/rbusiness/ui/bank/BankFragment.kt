@@ -6,13 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.skiffold.app.rbusiness.R
+import com.skiffold.app.rbusiness.databinding.FragmentBankBinding
 
 class BankFragment : Fragment() {
+    private lateinit var binding: FragmentBankBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_bank, container, false)
+    ): View {
+        binding = FragmentBankBinding.inflate(layoutInflater)
+        return binding.root
     }
 }
