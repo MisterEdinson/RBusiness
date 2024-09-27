@@ -49,6 +49,10 @@ class HomeFragment : Fragment() {
             viewModel.currentDateLiveData.observe(viewLifecycleOwner) { txtDate.text = it }
             viewModel.balance.observe(viewLifecycleOwner) { txtMoney.text = "$it $" }
             viewModel.experience.observe(viewLifecycleOwner) { txtExperience.text = it.toString() }
+            viewModel.job.observe(viewLifecycleOwner){
+                txtJob.text = viewModel.dataSelectedJobs[it].name
+                txtSalary.text = "$${viewModel.dataSelectedJobs[it].money} / мес"
+            }
         }
     }
 }
