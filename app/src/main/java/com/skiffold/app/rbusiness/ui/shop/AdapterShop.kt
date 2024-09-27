@@ -11,13 +11,13 @@ import com.skiffold.app.rbusiness.ui.utils.DataGame
 class AdapterShop(var click: (id:Int) -> Unit) : RecyclerView.Adapter<AdapterShop.Holder>() {
     class Holder(val binding: ItemMarketBinding) : RecyclerView.ViewHolder(binding.root)
 
-    private val callback = object : DiffUtil.ItemCallback<DataGame.JobModel>() {
-        override fun areItemsTheSame(oldItem: DataGame.JobModel, newItem: DataGame.JobModel): Boolean {
-            return oldItem.selected == newItem.selected
+    private val callback = object : DiffUtil.ItemCallback<DataGame.MarketModel>() {
+        override fun areItemsTheSame(oldItem: DataGame.MarketModel, newItem: DataGame.MarketModel): Boolean {
+            return oldItem.name == newItem.name
         }
 
-        override fun areContentsTheSame(oldItem: DataGame.JobModel, newItem: DataGame.JobModel): Boolean {
-            return oldItem.selected == newItem.selected
+        override fun areContentsTheSame(oldItem: DataGame.MarketModel, newItem: DataGame.MarketModel): Boolean {
+            return oldItem.money == newItem.money && oldItem.type == newItem.type
         }
     }
 
@@ -36,11 +36,6 @@ class AdapterShop(var click: (id:Int) -> Unit) : RecyclerView.Adapter<AdapterSho
         val item = list.currentList[position]
         holder.binding.apply {
             itemMarket.text = "${item.name} - ${item.money} / мес"
-            if (item.selected) {
-                itemMarket.isChecked = true
-            } else {
-                itemMarket.isChecked = false
-            }
             btnMarket.setOnClickListener {
                 click(position)
             }

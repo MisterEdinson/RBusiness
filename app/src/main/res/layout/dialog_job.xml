@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgDialog"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/image_arm_fracture" />
+
+    <TextView
+        android:id="@+id/txtDescDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/blackP"
+        android:text="Вас не приняли на собеседование изза внешнего вида, Вы очень расстроились и начали ругаться с руководителями. Они вызвали полицию и вам сломали руку. Скорая взяла с Вас 15$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgDialog"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleDialog" />
+
+    <TextView
+        android:id="@+id/txtTitleDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Вам отказали..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/blackP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgDialog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btnDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_btn_circle"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"
+        android:text="Понятно"
+        android:textColor="@color/blackP"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtDescDialog"
+        app:layout_constraintStart_toStartOf="@+id/txtDescDialog"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescDialog" />
+</androidx.constraintlayout.widget.ConstraintLayout>

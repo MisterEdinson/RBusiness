@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import com.skiffold.app.rbusiness.R
 import com.skiffold.app.rbusiness.databinding.FragmentEducationBinding
 import com.skiffold.app.rbusiness.ui.home.GameViewModel
+import com.skiffold.app.rbusiness.ui.utils.DataGame
 
 class EducationFragment : Fragment() {
     private lateinit var binding: FragmentEducationBinding
@@ -35,6 +36,16 @@ class EducationFragment : Fragment() {
     }
 
     private fun checked(select: Int){
-
+        viewModel.dataSelectedEducation.forEachIndexed { index, jobModel ->
+            if(select == index){
+                if(jobModel.selected){
+                    jobModel.selected = false
+                    viewModel.educations.remove(jobModel)
+                }else{
+                    jobModel.selected = true
+                    viewModel.educations.add(jobModel)
+                }
+            }
+        }
     }
 }

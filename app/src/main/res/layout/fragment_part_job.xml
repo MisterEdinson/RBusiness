@@ -24,6 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Ваши деньги :"
+        android:textColor="@color/blackP"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgLogoPartJob" />
 
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="2000 $"
+        android:textColor="@color/blackP"
         app:layout_constraintBottom_toBottomOf="@+id/txtLabelMoney"
         app:layout_constraintStart_toEndOf="@+id/txtLabelMoney"
         app:layout_constraintTop_toTopOf="@+id/txtLabelMoney" />
@@ -54,6 +56,7 @@
         android:layout_marginTop="8dp"
         android:text="Товар"
         android:textSize="12sp"
+        android:textColor="@color/blackP"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vMoney" />
 
@@ -65,6 +68,7 @@
         android:text="Цена"
         android:textSize="12sp"
         android:gravity="center"
+        android:textColor="@color/blackP"
         app:layout_constraintBottom_toBottomOf="@+id/txtLabelProduct"
         app:layout_constraintStart_toEndOf="@+id/txtLabelProduct"
         app:layout_constraintTop_toTopOf="@+id/txtLabelProduct" />
@@ -77,6 +81,7 @@
         android:text="Куплено"
         android:textSize="12sp"
         android:gravity="center"
+        android:textColor="@color/blackP"
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
@@ -89,6 +94,7 @@
         android:text="Продать"
         android:textSize="12sp"
         android:gravity="center"
+        android:textColor="@color/blackP"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/textView5" />
@@ -103,6 +109,7 @@
         android:layout_marginTop="8dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPartJob"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"

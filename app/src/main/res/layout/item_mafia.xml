@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtNameAutoritet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Николай Иванович"
+        android:textColor="@color/blackP"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btnAutoritet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn_circle"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="Перетереть"
+        android:textStyle="bold"
+        android:textColor="@color/blackP"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStatusAutoritet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNameAutoritet" />
+
+    <TextView
+        android:id="@+id/txtStatusAutoritet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Владелец домов пароходов"
+        android:textColor="@color/blackP"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/txtNameAutoritet"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameAutoritet" />
+
+    <TextView
+        android:id="@+id/txtNickAutoritet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="Туз"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStatusAutoritet"
+        app:layout_constraintEnd_toStartOf="@+id/btnAutoritet"
+        app:layout_constraintStart_toEndOf="@+id/txtStatusAutoritet"
+        app:layout_constraintTop_toTopOf="@+id/txtNameAutoritet" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
